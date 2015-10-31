@@ -9,8 +9,7 @@ Ending Date  : Still in Progress
 Author Name  : Merhawi Zeremariam
 
 Project  Description Overview:
-    
-    This project is about monitoring a lab beaker container level , and humudity/temprature reading by ,sending a text, or SMS message to your personal smart phone.
+     This project is about monitoring a lab beaker container level , and humudity/temprature reading by ,sending a text, or SMS message to your personal smart phone.
 These are the Phases had been accomplished, which are as follows
 
     Phase 1: Research of a qualified Interface Discovery Board
