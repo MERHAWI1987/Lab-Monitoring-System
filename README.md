@@ -9,6 +9,7 @@ Ending Date  : Still in Progress
 Author Name  : Merhawi Zeremariam
 
 Project  Description Overview:
+    
     This project is about monitoring a lab beaker container level , and humudity/temprature reading by ,sending a text, or SMS message to your personal smart phone.
 These are the Phases had been accomplished, which are as follows
 
@@ -16,22 +17,22 @@ These are the Phases had been accomplished, which are as follows
              The first part of designing is to determine an ideal interface microcontroller
         board that can easily deal with wireless networking, analog inputs, and
         Digital outputs.
-
     Phase 2: Testing the Input Sensors
                 Once I have ordered my parts, I will begin phase two by working on
         getting the input device to work between the Micro-Controllers and the smart
         phone. The second step of this project is how to get measurement reading from
         both proposed sensors, and to do so, I will be coding in C.
-
     Phase 3: Testing the Output Sensors
             In this stage of the project, is how to get the output device to be fully
         functional through various types of testes procedures.
 
 Obective:   
+    
     The main purpose of this project to build a working prototype unit that can collect, detect, and send
 data to wireless device.
 
 Hardware:
+    
     1. Input:
             A. Ultrasonic Range Detector
             B. Temperature and Humidity Sensor
