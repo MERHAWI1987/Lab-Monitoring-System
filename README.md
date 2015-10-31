@@ -27,7 +27,6 @@ These are the Phases had been accomplished, which are as follows
         functional through various types of testes procedures.
 
 Obective:   
-    
     The main purpose of this project to build a working prototype unit that can collect, detect, and send
 data to wireless device.
 
@@ -49,11 +48,14 @@ Hardware:
             Arduino Uno R3: 
 
 Project Issues/regulation:
-        This project is still in  development mode, which is not fully functional, I am not using any reference        projects ,only using written libraries written by arduino developers.I will be mentioning their names in the       project Source code.as an Open Source ,any outsider can comment and give feedback, for improving this project. 
+    
+        This project is still in  development mode, which is not fully functional, I am not using any reference projects ,only using written libraries written by arduino developers.I will be mentioning their names in the       project Source code.as an Open Source ,any outsider can comment and give feedback, for improving this project. 
 
 Project Source Code:
+    
     By clicking this link bellow , you are able to download and test it on your input and Output Hardware 
 
 Project BreadBoard Circuit Diagram:
+    
     By clicking this link below , you are able to download the schematic Circuit Diagram . 
             
