@@ -5,12 +5,12 @@
  Schematic Crcuit Wiring:
      Red        => 5v 
      Black      => GND
-     Yellow     => Analog 0;
+     Yellow     => Analog A1;
  
  And Modified further by Merhawi Zeremariam here : github account
  on 10 Nov 2012.
  */
- #define  sensorpin 0                  // analog pin used to connect the sharp sensor
+ #define  sensorpin A1                  // analog pin used to connect the sharp sensor
  const int LED = 11; // Declare the connected LED
  int val = 0;                          // variable to store the values from sensor(initially zero)
 
