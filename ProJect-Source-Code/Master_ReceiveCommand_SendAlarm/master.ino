@@ -1,4 +1,3 @@
-
 /*
  The Manager Program
 //Modified by  : Merhawi Zeremariam
