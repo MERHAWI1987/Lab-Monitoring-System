@@ -1,15 +1,15 @@
-Wireless-LAB-Montoring-System
+Wireless-Lab-Montoring-System
 
 CS 207 - Project
 
 Started date : OCT 1st 2015
 
-Ending Date  : Still in Progress
+Ending Date  : DEC 4th 2015
 
 Author Name  : Merhawi Zeremariam
 
 Project  Description Overview:
-     This project is about monitoring a lab beaker container level , and humudity/temprature reading by ,sending a text, or SMS message to your personal smart phone.
+     This project is about monitoring a lab beaker container level , and temprature reading by ,sending a text, or SMS message to your personal smart phone.
 These are the Phases had been accomplished, which are as follows
 
     Phase 1: Research of a qualified Interface Discovery Board
@@ -24,6 +24,13 @@ These are the Phases had been accomplished, which are as follows
     Phase 3: Testing the Output Sensors
             In this stage of the project, is how to get the output device to be fully
         functional through various types of testes procedures.
+        
+    Phase 4: Combining all the parts and testing
+            In this stage of the project is to get all the parts together , and testing each feature.
+          
+    Phase 5: Building the final demo module
+            In this stage of the project is to build the final display module for the class.
+           
 
 Obective:   
     The main purpose of this project to build a working prototype unit that can collect, detect, and send
@@ -33,8 +40,8 @@ Hardware:
     
     1. Input:
             A. Ultrasonic Range Detector
-            B. Temperature and Humidity Sensor
-                Humidity detector
+            B. Temperature  Sensor
+                Temperature detector
             C. Arduino GSM Shield
     2. Output:
             A. RGB LCD Display
@@ -44,7 +51,7 @@ Hardware:
             E. DC Fan
             F. Android/ IOS SIM card Phone
     3. Operating System Discovery Board:
-            Arduino Uno R3: 
+           2- Arduino Uno R3: 
 
 Project Issues/regulation:
     
