@@ -60,10 +60,8 @@ Arduino GSM Shield 2 Setup:
           http://www.quectel.com/uploadfile/product/quectel_m10_gsm_specification_v3.0.pdf
 
 Project Source Code:
-    
     It is an Open source, as long you give credit to the creator.
 
 Project BreadBoard Circuit Diagram:
-    
     It is an Open Source, as long you give credit to the creator. 
             
