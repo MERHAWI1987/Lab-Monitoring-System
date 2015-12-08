@@ -1,19 +1,16 @@
-/*
- The Manager Program
-//Modified by  : Merhawi Zeremariam
- This sketch, for the Arduino GSM shield, waits for a SMS message
- and displays it through the Serial port.
+/*The Manager
+ *Modified by: Merhawi Zeremariam
+* Sketch that request sensors status or values and based on the set up controls the *actuator, and also warns the client if the system is in Danger
+*This sketch, for the Arduino GSM shield, waits for a SMS message
+ *and displays it through the Serial port.
 
- Circuit:
- * GSM shield attached to and Arduino
+ *Circuit:
+ *GSM shield attached to and Arduino
  * SIM card that can receive SMS messages
 
- created 25 Feb 2012
- by Javier Zorzano / TD
-
- This example is in the public domain.
-
- http://www.arduino.cc/en/Tutorial/GSMExamplesReceiveSMS
+  *created 25 Feb 2012
+ *by Javier Zorzano / TD
+ *http://www.arduino.cc/en/Tutorial/GSMExamplesReceiveSMS
 
 */
 
@@ -27,26 +24,18 @@
 #define PINNUMBER ""
 #define ledPin 13
 
-//// Which pin on the Arduino is connected to the NeoPixels?
-//// On a Trinket or Gemma we suggest changing this to 1
-//#define     PIN        6
 
 #define ledRed 10
 #define ledGreen 4
 #define ledBlue 11
 
-//// How many NeoPixels are attached to the Arduino?
-//#define NUMPIXELS      1
-
 // initialize the library instances
 GSM gsmAccess;
 GSM_SMS sms;
 
-
-
 // Array to hold the number a SMS is retreived from
 char senderNumber[20];
-const String myPhone = "+13065804728";
+const String myPhone = "+99999999999";
 int delayval = 500; // delay for half a second
 int Sensors[] = {0,0,0,0};
 int maximumRange = 28;
@@ -75,9 +64,6 @@ void setup()
 
   //Wait for text to start your device
   Serial.println("System Start  Mode");
-  digitalWrite(ledRed, HIGH);
-  digitalWrite(ledGreen, LOW);
-  digitalWrite(ledBlue, LOW);
   Serial.println("Wait for the GSM to connect to the modem");
   
   //by Default the test Object is OFF
@@ -98,20 +84,20 @@ void setup()
   }
   Serial.println("Turn the led ON to check the GSM is initialize");
   digitalWrite(ledPin , HIGH);
+  delay(300);
+  digitalWrite(ledPin , LOW);	
   Serial.println("GSM initialized");
   Serial.println("First State Red LED");
-  digitalWrite(ledRed, HIGH);
-  digitalWrite(ledGreen, LOW);
-  digitalWrite(ledBlue, LOW);
-  
-  
-}
+  digitalWrite(ledRed, !HIGH);
+  digitalWrite(ledGreen,! LOW);
+  digitalWrite(ledBlue, !LOW);
+  }
 
 void loop() 
 {
   char c, d;
   String msg = "";
-  char remoteNum[] = "13065804728";  // telephone number to send sms
+  char remoteNum[] = "99999999999";  // telephone number to send sms
   
    // First State After GSM is initialized.
    
@@ -119,8 +105,6 @@ void loop()
   Serial.println("\nmy boss Emergency Contact ");
   Serial.print("         ");
   Serial.println(remoteNum);
-  
-
   // sms text to send to alarm the client
   Serial.println("\nThe alarm Text message");
   char txtMsg[]= "BOSS save me I am on Fire";
@@ -146,30 +130,29 @@ void loop()
       
       Serial.print(Sensors[2]);
       Serial.print('\t');
-      
-
       Serial.print(Sensors[3]);
-
        if((Sensors[0]>= 4)  && (Sensors[0]<= 10))
           {
             if((Sensors[1]>=15) && ( Sensors[1]<= 20))
                {
                   Serial.println("\nFull GREEN");
-                  digitalWrite(ledRed, LOW);
-                  digitalWrite(ledGreen, HIGH);
-                  digitalWrite(ledBlue, LOW);
-                  
+                  digitalWrite(ledRed, !LOW);
+                  digitalWrite(ledGreen, !HIGH);
+                  digitalWrite(ledBlue, !LOW);
                 }
-                  
-                  Serial.println("\n I am Filling it BLUE ");
-                  digitalWrite(ledRed, LOW);
-                  digitalWrite(ledGreen, LOW);
-                  digitalWrite(ledBlue, HIGH);
-
+                  else
+		{
+                  	Serial.println("\n I am Filling it BLUE ");
+                  	digitalWrite(ledRed, !LOW);
+                  	digitalWrite(ledGreen, !LOW);
+                  	digitalWrite(ledBlue, !HIGH);
+		}
           }
-         //No Breakes   
-      Serial.println("\nNO Beaker");  
-    
+          if(!((Sensors[0]>= 4)  && (Sensors[0]<= 10)))
+	{
+		//No Breakes   
+      		Serial.println("\nNO Beaker");  
+  	}  
       
    //Check Condition for my Temperature if excessed the setpoint
    //Serial.println("Check for Temperature sensor if exceed the setpoint");
@@ -184,12 +167,10 @@ void loop()
         Serial.println("\nCOMPLETE!\n");
       }
       else
-      {
-        Serial.println("No message sent");
-        delay(100);
-      }
-
-      
+	{
+        		Serial.println("No message sent");
+        		delay(100);
+      	} 
   // If there are any SMSs available()
   //Serial.println("wait for text"); 
   if (sms.available() ) {
@@ -234,19 +215,13 @@ void loop()
       {
         digitalWrite(ledPin, HIGH);
         Serial.println("System ON");
-        Serial.println("Anything Else BOSS"); 
-        Serial.println("Just Keep Doing your Job");
-                        
-        }
+        }	
     }
     Serial.println("\nEND OF MESSAGE");
-
     // Delete message from modem memory
    Serial.print("\nDELETE  MESSAGE from the modem memory");
     sms.flush();
     Serial.println("MESSAGE DELETED");
   }
-  delay(1000);
-
+  delay(100);
 }
-
