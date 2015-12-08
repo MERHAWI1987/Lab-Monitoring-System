@@ -1,4 +1,4 @@
-Wireless-Lab-Montoring-System
+Wireless-Montoring-Lab-System
 
 CS 207 - Project
 
@@ -33,8 +33,8 @@ These are the Phases had been accomplished, which are as follows
            
 
 Obective:   
-    The main purpose of this project to build a working prototype unit that can collect, detect, and send
-data to wireless device.
+    The main purpose of this project to build a working prototype unit that can collect, command, and send
+text to wireless device for warning .
 
 Hardware:
     
@@ -42,26 +42,28 @@ Hardware:
             A. Ultrasonic Range Detector
             B. Temperature  Sensor
                 Temperature detector
-            C. Arduino GSM Shield
+            C. Arduino GSM Shield 2
     2. Output:
-            A. RGB LCD Display
-            B. Water Pump DC Motor
-            C. Lab Beaker Container
-            D. Addressable RGB LED
-            E. DC Fan
-            F. Android/ IOS SIM card Phone
+            A. RGB LED
+            B. Green LED
+            C. Android/ IOS SIM card Phone
     3. Operating System Discovery Board:
            2- Arduino Uno R3: 
 
 Project Issues/regulation:
     
-        This project is still in  development mode, which is not fully functional, I am not using any reference projects ,only using written libraries written by arduino developers.I will be mentioning their names in the       project Source code.as an Open Source ,any outsider can comment and give feedback, for improving this project. 
+        This project is still in  development mode, for more features , which is fully functional, I am not using any reference projects ,only using written libraries written by arduino developers.I will be mentioning their names in the project Source code.as an Open Source ,any outsider can comment and give feedback, for improving this project. 
+
+Arduino GSM Shield 2 Setup:
+
+          By clicking the link below as a guide for setup your GSM shield 2 to work for canadian Sim card service.
+          http://www.quectel.com/uploadfile/product/quectel_m10_gsm_specification_v3.0.pdf
 
 Project Source Code:
     
-    By clicking this link bellow , you are able to download and test it on your input and Output Hardware 
+    It is an Open source, as long you give credit to the creator.
 
 Project BreadBoard Circuit Diagram:
     
-    By clicking this link below , you are able to download the schematic Circuit Diagram . 
+    It is an Open Source, as long you give credit to the creator. 
             
